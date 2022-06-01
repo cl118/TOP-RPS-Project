@@ -1,12 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-<script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors!</title>
+    <style>
+      p {
+        font-family: Roboto, arial, helvetica, sans-serif;
+        font-size: 18px;
+      }
+
+      #container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #rock-btn,
+      #paper-btn,
+      #scissors-btn {
+        font-size: 20px;
+      }
+
+      #score-container {
+        margin-top: 20px;
+        width: 200px;
+      }
+
+      #player,
+      #computer {
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Rock Paper Scissors Game</h1>
+      <p>Select rock, paper or scissors to test your luck!</p>
+      <div class="buttons">
+        <button id="rock-btn">Rock</button>
+        <button id="paper-btn">Paper</button>
+        <button id="scissors-btn">Scissors</button>
+      </div>
+      <div id="results"><p></p></div>
+      <div id="score-container">
+        <div id="player">
+          <div class="heading">
+            <span id="player-heading">Player:&nbsp;</span>
+          </div>
+          <div class="score"><span id="player-score">0</span></div>
+        </div>
+        <div id="computer">
+          <div class="heading">
+            <span id="computer-heading">Computer:&nbsp;</span>
+          </div>
+          <div class="score"><span id="computer-score">0</span></div>
+        </div>
+        <div id="announce-winner"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
